@@ -25,12 +25,8 @@ app.use(express.json());
 
 // Option 2 (Recommended for allowing credentials across all origins):
 const corsOptions = {
-  // Set origin to true or a function that always returns true
-  origin: true,
+  origin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, // IMPORTANT: Allows cookies/JWTs in the request
-  allowedHeaders: ["Content-Type", "Authorization"],
-  optionsSuccessStatus: 204,
 };
 
 // Middleware
